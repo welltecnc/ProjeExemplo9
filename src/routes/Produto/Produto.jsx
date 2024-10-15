@@ -19,7 +19,7 @@ const Produto =()=>{
 
     const handleSubmit=(e)=>{
         e.preventDefault()
-        fetch(`http://localhost:5000/produto/${id ? id : ''}`,{
+        fetch(`https://bd-1-sph.vercel.app/produtos/${id ? id : ''}`,{
             method:"post",
             headers:{
                 'Content-Type':'application/json',
@@ -31,7 +31,7 @@ const Produto =()=>{
     }
     useEffect(()=>{
         if(id){
-            fetch(`http://localhost:5000/produto/${id}`)
+            fetch(`https://bd-1-sph.vercel.app/produtos/${id}`)
             .then((res)=>{
                 return res.json();
             })
